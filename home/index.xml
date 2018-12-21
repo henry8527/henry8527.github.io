@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on </title>
+    <link>https://henry8527.github.io/home/</link>
+    <description>Recent content in Homes on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Thu, 12 Jul 2018 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://henry8527.github.io/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://henry8527.github.io/home/about/</link>
+      <pubDate>Thu, 12 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://henry8527.github.io/home/about/</guid>
+      <description>Biography I am a master student in Department of Computer Science and Engineering, National Tsing Hua University. My research interests lie in machine learning, particularly in deep learning. I&amp;rsquo;m now working on heuristic optimization method on Deep Neural Network.</description>
+    </item>
+    
+    <item>
+      <title>Selected Publications</title>
+      <link>https://henry8527.github.io/home/publications_selected/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://henry8527.github.io/home/publications_selected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Publications</title>
+      <link>https://henry8527.github.io/home/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://henry8527.github.io/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>https://henry8527.github.io/home/talks/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://henry8527.github.io/home/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>https://henry8527.github.io/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://henry8527.github.io/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://henry8527.github.io/home/projects/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://henry8527.github.io/home/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Work Experience</title>
+      <link>https://henry8527.github.io/home/teaching/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://henry8527.github.io/home/teaching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>https://henry8527.github.io/home/tags/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://henry8527.github.io/home/tags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://henry8527.github.io/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://henry8527.github.io/home/contact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
