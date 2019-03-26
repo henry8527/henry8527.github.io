@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Improving Adversarial Robustness via Guided Complement Entropy</title>
+      <link>https://henry8527.github.io/publication/gce/</link>
+      <pubDate>Fri, 01 Mar 2019 21:25:32 +0800</pubDate>
+      
+      <guid>https://henry8527.github.io/publication/gce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Complement Objective Training</title>
       <link>https://henry8527.github.io/publication/cot/</link>
       <pubDate>Tue, 01 Jan 2019 21:25:32 +0800</pubDate>

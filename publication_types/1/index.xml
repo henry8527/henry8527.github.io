@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Tue, 01 Jan 2019 21:25:32 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 01 Mar 2019 21:25:32 +0800</lastBuildDate>
     
 	<atom:link href="https://henry8527.github.io/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Improving Adversarial Robustness via Guided Complement Entropy</title>
+      <link>https://henry8527.github.io/publication/gce/</link>
+      <pubDate>Fri, 01 Mar 2019 21:25:32 +0800</pubDate>
+      
+      <guid>https://henry8527.github.io/publication/gce/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Complement Objective Training</title>
