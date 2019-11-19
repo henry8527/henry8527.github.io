@@ -15,10 +15,10 @@
   
     
   
-  <meta name="description" content="Learning with a primary objective, such as softmax cross entropy for classification and sequence generation, has been the norm for training deep neural networks for years. Although being a widely-adopted approach, using cross entropy as the primary objective exploits mostly the information from the ground-truth class for maximizing data likelihood, and largely ignores information from the complement (incorrect) classes. We argue that, in addition to the primary objective, training also using a complement objective that leverages information from the complement classes can be effective in improving model performance. This motivates us to study a new training paradigm that maximizes the likelihood of the ground-truth class while neutralizing the probabilities of the complement classes. We conduct extensive experiments on multiple tasks ranging from computer vision to natural language understanding. The experimental results confirm that, compared to the conventional training with just one primary objective, training also with the complement objective further improves the performance of the state-of-the-art models across all tasks. In addition to the accuracy improvement, we also show that models trained with both primary and complement objectives are more robust to adversarial attacks.">
+  <meta name="description" content="Label hierarchies widely exist in many vision-related problems, ranging from explicit label hierarchies existed in image classification to latent label hierarchies existed in semantic segmentation. Nevertheless, state-of-the-art methods often deploy cross-entropy loss that implicitly assumes class labels to be exclusive and thus independence from each other. Motivated by the fact that classes from the same parental category usually share certain similarity, we design a new training diagram called Hierarchical Complement Objective Training (HCOT) that leverages the information from label hierarchy. HCOT maximizes the probability of the ground truth class, and at the same time, neutralizes the probabilities of rest of the classes in a hierarchical fashion, making the model take advantage of the label hierarchy explicitly. The proposed HCOT is evaluated on both image classification and semantic segmentation tasks. Experimental results confirm that HCOT outperforms state-of-the-art models in CIFAR-100, ImageNet-2012, and PASCAL-Context. The study further demonstrates that HCOT can be applied on tasks with latent label hierarchies, which is a common characteristic in many machine learning tasks.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://henry8527.github.io/publication/cot/">
+  <link rel="alternate" hreflang="en-us" href="https://henry8527.github.io/publication/hcot/">
 
   
 
@@ -92,7 +92,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://henry8527.github.io/publication/cot/">
+  <link rel="canonical" href="https://henry8527.github.io/publication/hcot/">
 
   
   
@@ -104,21 +104,21 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="">
-  <meta property="og:url" content="https://henry8527.github.io/publication/cot/">
-  <meta property="og:title" content="Complement Objective Training | ">
-  <meta property="og:description" content="Learning with a primary objective, such as softmax cross entropy for classification and sequence generation, has been the norm for training deep neural networks for years. Although being a widely-adopted approach, using cross entropy as the primary objective exploits mostly the information from the ground-truth class for maximizing data likelihood, and largely ignores information from the complement (incorrect) classes. We argue that, in addition to the primary objective, training also using a complement objective that leverages information from the complement classes can be effective in improving model performance. This motivates us to study a new training paradigm that maximizes the likelihood of the ground-truth class while neutralizing the probabilities of the complement classes. We conduct extensive experiments on multiple tasks ranging from computer vision to natural language understanding. The experimental results confirm that, compared to the conventional training with just one primary objective, training also with the complement objective further improves the performance of the state-of-the-art models across all tasks. In addition to the accuracy improvement, we also show that models trained with both primary and complement objectives are more robust to adversarial attacks."><meta property="og:image" content="https://henry8527.github.io/img/profile.jpg">
+  <meta property="og:url" content="https://henry8527.github.io/publication/hcot/">
+  <meta property="og:title" content="Learning with Hierarchical Complement Objective | ">
+  <meta property="og:description" content="Label hierarchies widely exist in many vision-related problems, ranging from explicit label hierarchies existed in image classification to latent label hierarchies existed in semantic segmentation. Nevertheless, state-of-the-art methods often deploy cross-entropy loss that implicitly assumes class labels to be exclusive and thus independence from each other. Motivated by the fact that classes from the same parental category usually share certain similarity, we design a new training diagram called Hierarchical Complement Objective Training (HCOT) that leverages the information from label hierarchy. HCOT maximizes the probability of the ground truth class, and at the same time, neutralizes the probabilities of rest of the classes in a hierarchical fashion, making the model take advantage of the label hierarchy explicitly. The proposed HCOT is evaluated on both image classification and semantic segmentation tasks. Experimental results confirm that HCOT outperforms state-of-the-art models in CIFAR-100, ImageNet-2012, and PASCAL-Context. The study further demonstrates that HCOT can be applied on tasks with latent label hierarchies, which is a common characteristic in many machine learning tasks."><meta property="og:image" content="https://henry8527.github.io/img/profile.jpg">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-01-01T21:25:32&#43;08:00">
+  <meta property="article:published_time" content="2019-11-01T21:25:32&#43;08:00">
   
-  <meta property="article:modified_time" content="2019-01-01T21:25:32&#43;08:00">
-  
-
+  <meta property="article:modified_time" content="2019-11-01T21:25:32&#43;08:00">
   
 
   
 
-  <title>Complement Objective Training | </title>
+  
+
+  <title>Learning with Hierarchical Complement Objective | </title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -305,7 +305,7 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Complement Objective Training</h1>
+  <h1 itemprop="name">Learning with Hierarchical Complement Objective</h1>
 
   
 
@@ -322,10 +322,7 @@
       <span itemprop="name"><strong>Hao-Yun Chen</strong></span>
     </span>, 
     <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">Pei-Hsin Wang</span>
-    </span>, 
-    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">Chun-Hao Liu</span>
+      <span itemprop="name">Li-Huang Tsai</span>
     </span>, 
     <span itemscope itemprop="author" itemtype="http://schema.org/Person">
       <span itemprop="name">Shih-Chieh Chang</span>
@@ -340,7 +337,7 @@
       <span itemprop="name">Wei Wei</span>
     </span>, 
     <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">Da-Cheng Juan. <strong>ICLR&rsquo;19</strong>.</span>
+      <span itemprop="name">Da-Cheng Juan. <strong>arXiv:1911.07257</strong>.</span>
     </span>
     
   </div>
@@ -348,9 +345,9 @@
 
   <span class="article-date">
     
-    <meta content="2019-01-01 21:25:32 &#43;0800 CST" itemprop="datePublished">
-    <time datetime="2019-01-01 21:25:32 &#43;0800 CST" itemprop="dateModified">
-      Jan 1, 2019
+    <meta content="2019-11-01 21:25:32 &#43;0800 CST" itemprop="datePublished">
+    <time datetime="2019-11-01 21:25:32 &#43;0800 CST" itemprop="dateModified">
+      Nov 1, 2019
     </time>
   </span>
   <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
@@ -370,35 +367,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Complement%20Objective%20Training&amp;url=https%3a%2f%2fhenry8527.github.io%2fpublication%2fcot%2f"
+         href="https://twitter.com/intent/tweet?text=Learning%20with%20Hierarchical%20Complement%20Objective&amp;url=https%3a%2f%2fhenry8527.github.io%2fpublication%2fhcot%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhenry8527.github.io%2fpublication%2fcot%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhenry8527.github.io%2fpublication%2fhcot%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fhenry8527.github.io%2fpublication%2fcot%2f&amp;title=Complement%20Objective%20Training"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fhenry8527.github.io%2fpublication%2fhcot%2f&amp;title=Learning%20with%20Hierarchical%20Complement%20Objective"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fhenry8527.github.io%2fpublication%2fcot%2f&amp;title=Complement%20Objective%20Training"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fhenry8527.github.io%2fpublication%2fhcot%2f&amp;title=Learning%20with%20Hierarchical%20Complement%20Objective"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Complement%20Objective%20Training&amp;body=https%3a%2f%2fhenry8527.github.io%2fpublication%2fcot%2f">
+         href="mailto:?subject=Learning%20with%20Hierarchical%20Complement%20Objective&amp;body=https%3a%2f%2fhenry8527.github.io%2fpublication%2fhcot%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -440,7 +437,7 @@
   
 
 
-<a class="btn btn-outline-primary my-1 mr-1" href="https://openreview.net/pdf?id=HyM7AiA5YX" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary my-1 mr-1" href="https://arxiv.org/abs/1911.07257" target="_blank" rel="noopener">
   PDF
 </a>
 
@@ -472,7 +469,7 @@
 
     
     <h3>Abstract</h3>
-    <p class="pub-abstract" itemprop="text">Learning with a primary objective, such as softmax cross entropy for classification and sequence generation, has been the norm for training deep neural networks for years. Although being a widely-adopted approach, using cross entropy as the primary objective exploits mostly the information from the ground-truth class for maximizing data likelihood, and largely ignores information from the complement (incorrect) classes. We argue that, in addition to the primary objective, training also using a complement objective that leverages information from the complement classes can be effective in improving model performance. This motivates us to study a new training paradigm that maximizes the likelihood of the ground-truth class while neutralizing the probabilities of the complement classes. We conduct extensive experiments on multiple tasks ranging from computer vision to natural language understanding. The experimental results confirm that, compared to the conventional training with just one primary objective, training also with the complement objective further improves the performance of the state-of-the-art models across all tasks. In addition to the accuracy improvement, we also show that models trained with both primary and complement objectives are more robust to adversarial attacks.</p>
+    <p class="pub-abstract" itemprop="text">Label hierarchies widely exist in many vision-related problems, ranging from explicit label hierarchies existed in image classification to latent label hierarchies existed in semantic segmentation. Nevertheless, state-of-the-art methods often deploy cross-entropy loss that implicitly assumes class labels to be exclusive and thus independence from each other. Motivated by the fact that classes from the same parental category usually share certain similarity, we design a new training diagram called Hierarchical Complement Objective Training (HCOT) that leverages the information from label hierarchy. HCOT maximizes the probability of the ground truth class, and at the same time, neutralizes the probabilities of rest of the classes in a hierarchical fashion, making the model take advantage of the label hierarchy explicitly. The proposed HCOT is evaluated on both image classification and semantic segmentation tasks. Experimental results confirm that HCOT outperforms state-of-the-art models in CIFAR-100, ImageNet-2012, and PASCAL-Context. The study further demonstrates that HCOT can be applied on tasks with latent label hierarchies, which is a common characteristic in many machine learning tasks.</p>
     
 
     
@@ -483,8 +480,8 @@
           <div class="col-12 col-md-3 pub-row-heading">Type</div>
           <div class="col-12 col-md-9">
             
-            <a href="/publication/#1">
-              Conference paper
+            <a href="/publication/#3">
+              Manuscript
             </a>
             
           </div>
@@ -501,7 +498,7 @@
       <div class="col-md-10">
         <div class="row">
           <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-          <div class="col-12 col-md-9">International Conference on Learning Representation</div>
+          <div class="col-12 col-md-9">arXiv:1911.07257</div>
         </div>
       </div>
       <div class="col-md-1"></div>
@@ -515,7 +512,7 @@
         <div class="row">
           <div class="col-12 col-md-3 pub-row-heading">Date</div>
           <div class="col-12 col-md-9" itemprop="datePublished">
-            January, 2019
+            November, 2019
           </div>
         </div>
       </div>
